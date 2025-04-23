@@ -302,7 +302,7 @@ export default function Home() {
             <div className="relative rounded-lg overflow-hidden shadow-xl">
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-950 to-transparent p-4 z-10">
                 <h3 className="text-xl font-serif text-cream-100">
-                  The Era Trio Performance
+                  What'd I Say - Cover
                 </h3>
                 <p className="text-gold-400">Watch on YouTube</p>
               </div>
@@ -322,7 +322,7 @@ export default function Home() {
             <div className="relative rounded-lg overflow-hidden shadow-xl">
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-950 to-transparent p-4 z-10">
                 <h3 className="text-xl font-serif text-cream-100">
-                  Era Trio - Chicago Band
+                  Jazz Improv
                 </h3>
                 <p className="text-gold-400 text-sm">
                   Jalexkeys • 26 views • 1 month ago
