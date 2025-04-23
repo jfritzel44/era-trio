@@ -339,6 +339,26 @@ export default function Home() {
                 />
               </div>
             </div>
+
+            {/* Third Video Embed */}
+            <div className="relative rounded-lg overflow-hidden shadow-xl">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-950 to-transparent p-4 z-10">
+                <h3 className="text-xl font-serif text-cream-100">
+                  Melodica Jam
+                </h3>
+                <p className="text-gold-400">Watch on YouTube</p>
+              </div>
+              <div className="relative aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/TOY6GlLX984?si=fY4lOBb9XHR0tosF"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
