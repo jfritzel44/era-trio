@@ -217,7 +217,7 @@ export default function Home() {
                 About The Era Trio
               </h2>
               <p className="text-cream-100/90 mb-6 leading-relaxed">
-                Chicago's own The Era Trio brings a vibrant blend of funk,
+                Chicago's own, "The Era Trio", brings a vibrant blend of funk,
                 blues, soul, and jazz to every stage they play. With rich
                 grooves, tight rhythms, and an undeniable energy, The Era Trio
                 delivers an engaging musical experience rooted in timeless
