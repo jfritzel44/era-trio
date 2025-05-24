@@ -313,15 +313,15 @@ export default function Home() {
                 key={index}
                 className="bg-navy-950/70 rounded-lg p-6 flex flex-col md:flex-row gap-6 items-center border border-cream-100/10 hover:border-gold-500/30 transition"
               >
-                <div className="md:w-1/4 flex flex-col items-center md:items-start">
+                <div className="flex-1 flex flex-col items-center md:items-start">
                   <Calendar className="h-6 w-6 text-gold-400 mb-2" />
-                  <span className="text-cream-100 font-medium">{show.date}</span>
-                  <span className="text-gold-400 text-sm mt-1">{show.time}</span>
+                  <span className="text-cream-100 font-medium text-center md:text-left">{show.date}</span>
+                  <span className="text-gold-400 text-sm mt-1 text-center md:text-left">{show.time}</span>
                 </div>
-                <div className="md:w-1/3">
-                  <h3 className="font-serif text-xl text-cream-100 text-center md:text-left">{show.venue}</h3>
+                <div className="flex-1 text-center">
+                  <h3 className="font-serif text-xl text-cream-100">{show.venue}</h3>
                 </div>
-                <div className="md:w-5/12 flex items-center">
+                <div className="flex-1 flex items-center justify-center md:justify-end">
                   <MapPin className="h-5 w-5 text-gold-400 mr-2" />
                   <span className="text-cream-100/80">{show.location}</span>
                 </div>
