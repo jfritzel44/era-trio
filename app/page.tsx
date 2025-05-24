@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { ChevronRight, Calendar, MapPin, Play, Menu, X, Loader2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { YouTubeEmbed } from "@next/third-parties/google"
 import { useState, type FormEvent } from "react"
 import { sendContactEmail } from "./actions"
 
@@ -249,26 +250,14 @@ export default function Home() {
           </div>
 
           <div className="max-w-4xl mx-auto space-y-8">
-            {/* First Video Embed */}
-            <div className="aspect-video w-full rounded-lg overflow-hidden shadow-xl">
-              <iframe
-                src="https://www.youtube.com/embed/pp2ExlDgl28"
-                title="The Era Trio Performance"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="w-full h-full"
-              ></iframe>
+            {/* First Video Embed using YouTubeEmbed */}
+            <div className="rounded-lg overflow-hidden shadow-xl">
+              <YouTubeEmbed videoid="pp2ExlDgl28" height={400} />
             </div>
 
-            {/* Second Video Embed */}
-            <div className="aspect-video w-full rounded-lg overflow-hidden shadow-xl">
-              <iframe
-                src="https://www.youtube.com/embed/Tfi9_aw3sM0"
-                title="Era Trio - Chicago Band"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="w-full h-full"
-              ></iframe>
+            {/* Second Video Embed using YouTubeEmbed */}
+            <div className="rounded-lg overflow-hidden shadow-xl">
+              <YouTubeEmbed videoid="Tfi9_aw3sM0" height={400} />
             </div>
           </div>
         </div>
