@@ -4,7 +4,6 @@ import Link from "next/link"
 import Image from "next/image"
 import { ChevronRight, Calendar, MapPin, Play, Menu, X, Loader2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { YouTubeEmbed } from "@next/third-parties/google"
 import { useState, type FormEvent } from "react"
 import { sendContactEmail } from "./actions"
 
@@ -249,15 +248,47 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-8">
-            {/* First Video Embed using YouTubeEmbed */}
-            <div className="rounded-lg overflow-hidden shadow-xl">
-              <YouTubeEmbed videoid="pp2ExlDgl28" height={400} />
+          <div className="max-w-4xl mx-auto space-y-12">
+            {/* First Video */}
+            <div className="w-full">
+              <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+                <iframe
+                  src="https://www.youtube.com/embed/pp2ExlDgl28?controls=1&modestbranding=1&rel=0&showinfo=0&fs=1&cc_load_policy=0&iv_load_policy=3&autohide=0"
+                  title="The Era Trio Performance"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute top-0 left-0 w-full h-full rounded-lg shadow-xl"
+                  style={{ border: "none" }}
+                ></iframe>
+              </div>
             </div>
 
-            {/* Second Video Embed using YouTubeEmbed */}
-            <div className="rounded-lg overflow-hidden shadow-xl">
-              <YouTubeEmbed videoid="Tfi9_aw3sM0" height={400} />
+            {/* Second Video */}
+            <div className="w-full">
+              <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+                <iframe
+                  src="https://www.youtube.com/embed/Tfi9_aw3sM0?controls=1&modestbranding=1&rel=0&showinfo=0&fs=1&cc_load_policy=0&iv_load_policy=3&autohide=0"
+                  title="Era Trio - Chicago Band"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute top-0 left-0 w-full h-full rounded-lg shadow-xl"
+                  style={{ border: "none" }}
+                ></iframe>
+              </div>
+            </div>
+
+            {/* Third Video */}
+            <div className="w-full">
+              <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+                <iframe
+                  src="https://www.youtube.com/embed/TOY6GlLX984?controls=1&modestbranding=1&rel=0&showinfo=0&fs=1&cc_load_policy=0&iv_load_policy=3&autohide=0"
+                  title="Moog Melodica Jam"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute top-0 left-0 w-full h-full rounded-lg shadow-xl"
+                  style={{ border: "none" }}
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
@@ -275,8 +306,8 @@ export default function Home() {
 
           <div className="space-y-6 max-w-4xl mx-auto">
             {[
-              { date: "June 13, 2025", venue: "Fullers Pub", location: "Chicago, IL" },
-              { date: "July 2, 2025", venue: "Wilmette Theater", location: "Wilmette, IL" },
+              { date: "June 13, 2025", time: "6:00 PM - 8:00 PM", venue: "Fullers Pub", location: "Chicago, IL" },
+              { date: "July 2, 2025", time: "7:00 PM - 9:00 PM", venue: "Wilmette Theater", location: "Wilmette, IL" },
             ].map((show, index) => (
               <div
                 key={index}
@@ -285,6 +316,7 @@ export default function Home() {
                 <div className="md:w-1/4 flex flex-col items-center md:items-start">
                   <Calendar className="h-6 w-6 text-gold-400 mb-2" />
                   <span className="text-cream-100 font-medium">{show.date}</span>
+                  <span className="text-gold-400 text-sm mt-1">{show.time}</span>
                 </div>
                 <div className="md:w-1/3">
                   <h3 className="font-serif text-xl text-cream-100 text-center md:text-left">{show.venue}</h3>
