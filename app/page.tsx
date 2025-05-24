@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { ChevronRight, Calendar, MapPin, Play, Youtube, Menu, X, Loader2 } from "lucide-react"
+import { ChevronRight, Calendar, MapPin, Play, Menu, X, Loader2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState, type FormEvent } from "react"
 import { sendContactEmail } from "./actions"
@@ -249,51 +249,27 @@ export default function Home() {
           </div>
 
           <div className="max-w-4xl mx-auto space-y-8">
-            {/* First Video Link */}
-            <a
-              href="https://www.youtube.com/watch?v=pp2ExlDgl28"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block aspect-video w-full rounded-lg overflow-hidden shadow-xl relative group"
-            >
-              <div className="absolute inset-0 bg-navy-800/50 flex items-center justify-center group-hover:bg-navy-800/30 transition-all duration-300">
-                <div className="bg-gold-500 rounded-full p-4 group-hover:scale-110 transition-transform duration-300">
-                  <Youtube className="h-10 w-10 text-navy-950" />
-                </div>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-950 to-transparent p-4">
-                <h3 className="text-xl font-serif text-cream-100">The Era Trio Performance</h3>
-                <p className="text-gold-400">Watch on YouTube</p>
-              </div>
-              <img
-                src="https://img.youtube.com/vi/pp2ExlDgl28/maxresdefault.jpg"
-                alt="The Era Trio Performance"
-                className="w-full h-full object-cover"
-              />
-            </a>
+            {/* First Video Embed */}
+            <div className="aspect-video w-full rounded-lg overflow-hidden shadow-xl">
+              <iframe
+                src="https://www.youtube.com/embed/pp2ExlDgl28"
+                title="The Era Trio Performance"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
 
-            {/* Second Video Link - Updated with new image */}
-            <a
-              href="https://www.youtube.com/watch?v=Tfi9_aw3sM0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block aspect-video w-full rounded-lg overflow-hidden shadow-xl relative group"
-            >
-              <div className="absolute inset-0 bg-navy-800/50 flex items-center justify-center group-hover:bg-navy-800/30 transition-all duration-300">
-                <div className="bg-gold-500 rounded-full p-4 group-hover:scale-110 transition-transform duration-300">
-                  <Youtube className="h-10 w-10 text-navy-950" />
-                </div>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-950 to-transparent p-4">
-                <h3 className="text-xl font-serif text-cream-100">Era Trio - Chicago Band</h3>
-                <p className="text-gold-400 text-sm">Jalexkeys • 26 views • 1 month ago</p>
-              </div>
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-JkbVrjIjKNJEeDKgiNAyHFx0bhu2om.png"
-                alt="Era Trio - Chicago Band - Drummer smiling during performance"
-                className="w-full h-full object-cover"
-              />
-            </a>
+            {/* Second Video Embed */}
+            <div className="aspect-video w-full rounded-lg overflow-hidden shadow-xl">
+              <iframe
+                src="https://www.youtube.com/embed/Tfi9_aw3sM0"
+                title="Era Trio - Chicago Band"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>
